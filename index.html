@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="kn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basava Acu Academy Festival Book Offer</title>
+    <meta
+      name="description"
+      content="Basava Acu Academy festival offer: buy health awareness books and get free class videos in Kannada and English."
+    />
+    <style>
+      :root {
+        --deep: #07352f;
+        --ink: #163d35;
+        --leaf: #16755d;
+        --gold: #f2af22;
+        --saffron: #f07323;
+        --rose: #b92c4b;
+        --cream: #fff8e6;
+        --white: #ffffff;
+        --shadow: 0 24px 70px rgba(7, 53, 47, 0.2);
+        --soft-shadow: 0 16px 36px rgba(7, 53, 47, 0.12);
+        scroll-behavior: smooth;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 12% 8%, rgba(242, 175, 34, 0.24), transparent 26rem),
+          radial-gradient(circle at 86% 16%, rgba(22, 117, 93, 0.16), transparent 24rem),
+          linear-gradient(180deg, #fff8e6 0%, #effaf2 52%, #fff1de 100%);
+        font-family: "Noto Sans Kannada", "Nirmala UI", "Segoe UI", Arial, sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .progress {
+        position: fixed;
+        inset: 0 auto auto 0;
+        z-index: 90;
+        width: 0;
+        height: 5px;
+        background: linear-gradient(90deg, var(--saffron), var(--gold), var(--leaf));
+        box-shadow: 0 0 18px rgba(242, 175, 34, 0.8);
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 80;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px clamp(16px, 4vw, 58px);
+        border-bottom: 1px solid rgba(7, 53, 47, 0.12);
+        background: rgba(255, 248, 230, 0.88);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        letter-spacing: 0;
+        white-space: nowrap;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 44px;
+        height: 44px;
+        place-items: center;
+        border-radius: 50%;
+        color: #fff;
+        background: conic-gradient(from 150deg, var(--leaf), var(--gold), var(--saffron), var(--leaf));
+        box-shadow: 0 10px 24px rgba(22, 117, 93, 0.28);
+        font-size: 13px;
+      }
+
+      .brand small {
+        display: block;
+        color: #6b7d74;
+        font-weight: 750;
+      }
+
+      .nav {
+        display: flex;
+        gap: 9px;
+        overflow-x: auto;
+        padding: 4px 0;
+      }
+
+      .nav a {
+        flex: 0 0 auto;
+        padding: 9px 14px;
+        border: 1px solid rgba(7, 53, 47, 0.14);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.76);
+        color: #24463f;
+        font-size: 14px;
+        font-weight: 850;
+        text-decoration: none;
+        transition:
+          transform 180ms ease,
+          background 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .nav a:hover {
+        transform: translateY(-2px);
+        background: #fff;
+        box-shadow: 0 10px 24px rgba(7, 53, 47, 0.13);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .page {
+        min-height: 100vh;
+        padding: clamp(42px, 6vw, 88px) clamp(18px, 5vw, 76px);
+        scroll-margin-top: 72px;
+      }
+
+      .page.english {
+        background:
+          radial-gradient(circle at 10% 22%, rgba(185, 44, 75, 0.12), transparent 24rem),
+          linear-gradient(135deg, #eef9f1 0%, #fff5df 100%);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+        gap: clamp(24px, 5vw, 62px);
+        align-items: center;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .intro {
+        position: relative;
+        z-index: 1;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        width: fit-content;
+        padding: 8px 13px;
+        border: 1px solid rgba(240, 115, 35, 0.22);
+        border-radius: 999px;
+        background: rgba(255, 247, 226, 0.82);
+        color: #8c3d0e;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      h1 {
+        margin-top: 18px;
+        color: var(--deep);
+        font-size: clamp(38px, 6vw, 78px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        margin-top: 20px;
+        max-width: 680px;
+        color: #456a61;
+        font-size: clamp(17px, 2vw, 22px);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 13px 18px;
+        border: 0;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--saffron), var(--gold));
+        color: #251405;
+        font-size: 15px;
+        font-weight: 950;
+        text-decoration: none;
+        box-shadow: 0 14px 30px rgba(240, 115, 35, 0.3);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 36px rgba(240, 115, 35, 0.36);
+      }
+
+      .button.secondary {
+        border: 1px solid rgba(7, 53, 47, 0.16);
+        background: rgba(255, 255, 255, 0.82);
+        color: var(--deep);
+        box-shadow: none;
+      }
+
+      .visual {
+        min-height: 520px;
+        border: 1px solid rgba(7, 53, 47, 0.12);
+        border-radius: 8px;
+        background:
+          linear-gradient(120deg, rgba(7, 53, 47, 0.92) 0%, rgba(7, 53, 47, 0.22) 48%, rgba(255, 248, 230, 0.04) 100%),
+          url("public/festival-books-hero.png") center / cover no-repeat;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .visual-panel {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        min-height: 520px;
+        padding: clamp(22px, 4vw, 42px);
+        color: #fff;
+      }
+
+      .visual-panel strong {
+        max-width: 380px;
+        color: #ffe6ae;
+        font-size: clamp(32px, 5vw, 62px);
+        line-height: 0.95;
+      }
+
+      .visual-panel span {
+        display: block;
+        max-width: 420px;
+        margin-top: 14px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 18px;
+        font-weight: 750;
+      }
+
+      .notice-strip {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        max-width: 1280px;
+        margin: 28px auto 0;
+      }
+
+      .notice {
+        padding: 15px;
+        border: 1px solid rgba(7, 53, 47, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.74);
+        box-shadow: var(--soft-shadow);
+      }
+
+      .notice b {
+        display: block;
+        color: var(--deep);
+        font-size: 18px;
+      }
+
+      .notice span {
+        display: block;
+        margin-top: 4px;
+        color: #5d746d;
+        font-size: 14px;
+        font-weight: 720;
+      }
+
+      .books-wrap {
+        max-width: 1280px;
+        margin: clamp(34px, 5vw, 58px) auto 0;
+      }
+
+      .section-title {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .section-title h2 {
+        color: var(--deep);
+        font-size: clamp(28px, 4vw, 48px);
+        line-height: 1.08;
+      }
+
+      .section-title p {
+        max-width: 480px;
+        color: #5d746d;
+        font-size: 16px;
+        font-weight: 720;
+      }
+
+      .books {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .book {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 390px;
+        overflow: hidden;
+        padding: 19px;
+        border: 1px solid rgba(7, 53, 47, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.78);
+        box-shadow: var(--soft-shadow);
+        transition:
+          transform 220ms ease,
+          box-shadow 220ms ease,
+          background 220ms ease;
+      }
+
+      .book:hover {
+        transform: translateY(-7px);
+        background: #fff;
+        box-shadow: var(--shadow);
+      }
+
+      .book::before {
+        content: "";
+        display: block;
+        height: 8px;
+        margin: -19px -19px 18px;
+        background: linear-gradient(90deg, var(--saffron), var(--gold), var(--leaf));
+      }
+
+      .book:nth-child(2)::before {
+        background: linear-gradient(90deg, #673ab7, var(--gold), var(--rose));
+      }
+
+      .book:nth-child(3)::before {
+        background: linear-gradient(90deg, var(--leaf), #48b58f, var(--gold));
+      }
+
+      .book:nth-child(4)::before {
+        background: linear-gradient(90deg, var(--rose), var(--saffron), #37a7b8);
+      }
+
+      .badge {
+        width: fit-content;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: rgba(22, 117, 93, 0.1);
+        color: var(--leaf);
+        font-size: 12px;
+        font-weight: 950;
+      }
+
+      .book h3 {
+        margin-top: 14px;
+        color: var(--deep);
+        font-size: 24px;
+        line-height: 1.12;
+      }
+
+      .classes {
+        margin-top: 16px;
+        color: var(--saffron);
+        font-size: 42px;
+        font-weight: 950;
+        line-height: 1;
+      }
+
+      .classes span {
+        display: block;
+        margin-top: 5px;
+        color: #5c716b;
+        font-size: 14px;
+        line-height: 1.25;
+      }
+
+      .book p {
+        margin-top: 15px;
+        color: #4d6b63;
+        font-size: 15px;
+        font-weight: 720;
+      }
+
+      .book .button {
+        width: 100%;
+        margin-top: auto;
+      }
+
+      .gift-note {
+        max-width: 1280px;
+        margin: 24px auto 0;
+        padding: 20px;
+        border-left: 6px solid var(--gold);
+        border-radius: 8px;
+        background: rgba(242, 175, 34, 0.13);
+        color: #365850;
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .contact-panel {
+        max-width: 1280px;
+        margin: 24px auto 0;
+        padding: 24px;
+        border-radius: 8px;
+        color: #fff;
+        background:
+          linear-gradient(135deg, rgba(7, 53, 47, 0.94), rgba(137, 48, 14, 0.84)),
+          url("public/festival-books-hero.png") center / cover no-repeat;
+        box-shadow: var(--shadow);
+        text-align: center;
+      }
+
+      .contact-panel h2 {
+        color: #fff;
+        font-size: clamp(26px, 4vw, 46px);
+        line-height: 1.08;
+      }
+
+      .contact-panel p {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 17px;
+      }
+
+      .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .contacts a {
+        padding: 11px 14px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.13);
+        color: #fff;
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 650ms ease,
+          transform 650ms ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 1080px) {
+        .hero-grid,
+        .books {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .notice-strip {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .visual,
+        .visual-panel {
+          min-height: 430px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav {
+          width: 100%;
+        }
+
+        .hero-grid,
+        .books,
+        .notice-strip {
+          grid-template-columns: 1fr;
+        }
+
+        .section-title {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .visual,
+        .visual-panel {
+          min-height: 360px;
+        }
+
+        h1 {
+          font-size: 38px;
+        }
+
+        .book {
+          min-height: 340px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress" id="progress"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">BAA</div>
+        <div>
+          <div>Basava Acu Academy</div>
+          <small>Bengaluru</small>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Language navigation">
+        <a href="#kannada">ಕನ್ನಡ ಪುಟ</a>
+        <a href="#english">English Page</a>
+        <a href="tel:9606496416">Call Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page kannada" id="kannada">
+        <div class="hero-grid">
+          <div class="intro reveal">
+            <div class="kicker">ಗೌರಿ ಗಣೇಶ ಹಾಗೂ ಶ್ರೀಕೃಷ್ಣ ಜನ್ಮಾಷ್ಟಮಿ ವಿಶೇಷ ಕೊಡುಗೆ</div>
+            <h1>ಈ ಹಬ್ಬಕ್ಕೆ ಆರೋಗ್ಯದ ಅರಿವು ಉಡುಗೊರೆಯಾಗಿ ನೀಡಿ</h1>
+            <p class="lead">
+              ಕೆಳಗಿನ ಪುಸ್ತಕಗಳಲ್ಲಿ ನಿಮಗೆ ಬೇಕಾದ ಪುಸ್ತಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ಪುಸ್ತಕ ಖರೀದಿಸಿದರೆ ಸಂಬಂಧಿಸಿದ ತರಗತಿಗಳ ವಿಡಿಯೋಗಳು ಸಂಪೂರ್ಣ ಉಚಿತವಾಗಿ ದೊರೆಯುತ್ತವೆ.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#kannada-books">ಪುಸ್ತಕ ಆಯ್ಕೆ ಮಾಡಿ</a>
+              <a class="button secondary" href="#english">English Page</a>
+            </div>
+          </div>
+          <div class="visual reveal">
+            <div class="visual-panel">
+              <strong>ಒಂದು ಪುಸ್ತಕ, ಒಂದು ಅರಿವು</strong>
+              <span>BAA App ಮೂಲಕ 30 ದಿನಗಳವರೆಗೆ ವಿಡಿಯೋ ತರಗತಿಗಳನ್ನು ವೀಕ್ಷಿಸಬಹುದು.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice-strip">
+          <div class="notice reveal"><b>ಆರಂಭ</b><span>ವಿಡಿಯೋ ತರಗತಿ ಸೆಪ್ಟೆಂಬರ್ 5ರಿಂದ</span></div>
+          <div class="notice reveal"><b>ಭಾಷೆ</b><span>ಕನ್ನಡ / ಇಂಗ್ಲಿಷ್</span></div>
+          <div class="notice reveal"><b>ರೆಕಾರ್ಡಿಂಗ್</b><span>30 ದಿನಗಳವರೆಗೆ ಲಭ್ಯ</span></div>
+          <div class="notice reveal"><b>ಕೊನೆಯ ದಿನ</b><span>ಸೆಪ್ಟೆಂಬರ್ 5ರವರೆಗೆ ಮಾತ್ರ</span></div>
+        </div>
+
+        <div class="books-wrap" id="kannada-books">
+          <div class="section-title reveal">
+            <h2>ಪುಸ್ತಕವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</h2>
+            <p>ಪ್ರತಿ ಪುಸ್ತಕಕ್ಕೆ ಬೇರೆ ಪಾವತಿ ಬಟನ್ ಇದೆ. ನಿಮಗೆ ಬೇಕಾದ ಪುಸ್ತಕದ ಮೇಲೆ “ಈಗ ಖರೀದಿಸಿ” ಒತ್ತಿರಿ.</p>
+          </div>
+          <div class="books">
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>ಕಲರ್ ಥೆರಪಿ ಪುಸ್ತಕ</h3>
+              <div class="classes">14<span>ಕಲರ್ ಥೆರಪಿ ತರಗತಿ ವಿಡಿಯೋಗಳು ಉಚಿತ</span></div>
+              <p>ಒಂದು ಬಣ್ಣ, ಒಂದು ಅರಿವು, ಆರೋಗ್ಯದ ಕಡೆಗೆ ಒಂದು ಹೊಸ ಪ್ರಯತ್ನ.</p>
+              <a class="button" href="https://rzp.io/rzp/COLOURTHERAPYBOOKWITHCOURSE">ಈಗ ಖರೀದಿಸಿ</a>
+            </article>
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>ಕಲರ್ ನ್ಯೂಮರಾಲಜಿ ಪುಸ್ತಕ</h3>
+              <div class="classes">09<span>ಕಲರ್ ನ್ಯೂಮರಾಲಜಿ ತರಗತಿ ವಿಡಿಯೋಗಳು ಉಚಿತ</span></div>
+              <p>ಬಣ್ಣ ಮತ್ತು ಸಂಖ್ಯೆಗಳ ಅರಿವಿನ ಮೂಲಕ ಹೊಸ ಕಲಿಕೆಯ ಅನುಭವ.</p>
+              <a class="button" href="https://rzp.io/rzp/COLOURNUMEROLOGYBOOKWITHCOURSE">ಈಗ ಖರೀದಿಸಿ</a>
+            </article>
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>ಆರಿಕ್ಯುಲರ್ ಥೆರಪಿ ಪುಸ್ತಕ</h3>
+              <div class="classes">09<span>ಆರಿಕ್ಯುಲರ್ ಥೆರಪಿ ತರಗತಿ ವಿಡಿಯೋಗಳು ಉಚಿತ</span></div>
+              <p>ಕಿವಿಯ ಬಿಂದುಗಳ ಅರಿವಿಗೆ ಸರಳ ಮತ್ತು ಉಪಯುಕ್ತ ಕಲಿಕೆ.</p>
+              <a class="button" href="https://rzp.io/rzp/AURICULARBOOKWITHCOURSE">ಈಗ ಖರೀದಿಸಿ</a>
+            </article>
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>ಅಕ್ಯುಪ್ರೆಷರ್ ಥೆರಪಿ ಪುಸ್ತಕ</h3>
+              <div class="classes">06<span>ಅಕ್ಯುಪ್ರೆಷರ್ ತರಗತಿ ವಿಡಿಯೋಗಳು ಉಚಿತ</span></div>
+              <p>ಮನೆಯಲ್ಲಿ ಆರೋಗ್ಯ ಅರಿವು ಬೆಳೆಸಲು ಸರಳ ಕಲಿಕಾ ಪುಸ್ತಕ.</p>
+              <a class="button" href="https://rzp.io/rzp/ACUPRESSUREBOOKWITHCOURSE">ಈಗ ಖರೀದಿಸಿ</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="gift-note reveal">
+          ದುಬಾರಿ ಅಥವಾ ಉಪಯೋಗವಿಲ್ಲದ ವಸ್ತುಗಳ ಬದಲು, ನಿಮ್ಮ ಸಂಬಂಧಿಕರು, ಸ್ನೇಹಿತರು, ಅಕ್ಕ-ತಂಗಿಯರು, ಸಹೋದರ-ಸಹೋದರಿಯರು ಹಾಗೂ ಆತ್ಮೀಯರಿಗೆ ಆರೋಗ್ಯದ ಅರಿವು ಮೂಡಿಸುವ ಉಪಯುಕ್ತ ಪುಸ್ತಕವನ್ನು ಉಡುಗೊರೆಯಾಗಿ ನೀಡಿ.
+        </div>
+
+        <div class="contact-panel reveal">
+          <h2>ಆರೋಗ್ಯದ ಅರಿವು ಪ್ರತಿಯೊಂದು ಮನೆಯಲ್ಲೂ</h2>
+          <p>ಬಸವ ಅಕ್ಯು ಅಕಾಡೆಮಿ, ಬೆಂಗಳೂರು. ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಸಂಪರ್ಕಿಸಿ.</p>
+          <div class="contacts">
+            <a href="tel:9606496416">9606496416</a>
+            <a href="tel:9606988910">9606988910</a>
+            <a href="tel:9606496409">9606496409</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page english" id="english">
+        <div class="hero-grid">
+          <div class="intro reveal">
+            <div class="kicker">Gowri Ganesha and Sri Krishna Janmashtami Special</div>
+            <h1>Gift Health Awareness This Festival</h1>
+            <p class="lead">
+              Select any of the four Basava Acu Academy books below. When you purchase a book, you receive the related class videos completely free.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#english-books">Select a Book</a>
+              <a class="button secondary" href="#kannada">ಕನ್ನಡ ಪುಟ</a>
+            </div>
+          </div>
+          <div class="visual reveal">
+            <div class="visual-panel">
+              <strong>One book, one awareness</strong>
+              <span>Watch the video classes through the BAA App with 30 days recording access.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="notice-strip">
+          <div class="notice reveal"><b>Starts</b><span>Video classes begin from September 5</span></div>
+          <div class="notice reveal"><b>Language</b><span>Kannada / English</span></div>
+          <div class="notice reveal"><b>Recording</b><span>Available for 30 days</span></div>
+          <div class="notice reveal"><b>Deadline</b><span>Offer valid only until September 5</span></div>
+        </div>
+
+        <div class="books-wrap" id="english-books">
+          <div class="section-title reveal">
+            <h2>Choose Your Book</h2>
+            <p>Each book has its own payment button. Tap “Buy Now” for the book you want.</p>
+          </div>
+          <div class="books">
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>Color Therapy Book</h3>
+              <div class="classes">14<span>Color Therapy class videos free</span></div>
+              <p>One color, one awareness, one fresh step toward health understanding.</p>
+              <a class="button" href="https://rzp.io/rzp/COLOURTHERAPYBOOKWITHCOURSE">Buy Now</a>
+            </article>
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>Color Numerology Book</h3>
+              <div class="classes">09<span>Color Numerology class videos free</span></div>
+              <p>Explore a useful learning path through color and number awareness.</p>
+              <a class="button" href="https://rzp.io/rzp/COLOURNUMEROLOGYBOOKWITHCOURSE">Buy Now</a>
+            </article>
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>Auricular Therapy Book</h3>
+              <div class="classes">09<span>Auricular Therapy class videos free</span></div>
+              <p>Simple learning for awareness of ear points and therapy concepts.</p>
+              <a class="button" href="https://rzp.io/rzp/AURICULARBOOKWITHCOURSE">Buy Now</a>
+            </article>
+            <article class="book reveal">
+              <div class="badge">Book + Free Videos</div>
+              <h3>Acupressure Therapy Book</h3>
+              <div class="classes">06<span>Acupressure class videos free</span></div>
+              <p>A practical book for building health awareness at home.</p>
+              <a class="button" href="https://rzp.io/rzp/ACUPRESSUREBOOKWITHCOURSE">Buy Now</a>
+            </article>
+          </div>
+        </div>
+
+        <div class="gift-note reveal">
+          Instead of gifting expensive or unused items, give your relatives, friends, brothers, sisters, and loved ones a useful book that creates health awareness.
+        </div>
+
+        <div class="contact-panel reveal">
+          <h2>Health awareness in every home</h2>
+          <p>Basava Acu Academy, Bengaluru. For more information, contact us.</p>
+          <div class="contacts">
+            <a href="tel:9606496416">9606496416</a>
+            <a href="tel:9606988910">9606988910</a>
+            <a href="tel:9606496409">9606496409</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const progress = document.getElementById("progress");
+      const revealItems = [...document.querySelectorAll(".reveal")];
+
+      function updateProgress() {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const percent = max > 0 ? (window.scrollY / max) * 100 : 0;
+        progress.style.width = `${percent}%`;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.16 },
+      );
+
+      revealItems.forEach((item) => observer.observe(item));
+      window.addEventListener("scroll", updateProgress, { passive: true });
+      updateProgress();
+    </script>
+  </body>
+</html>
