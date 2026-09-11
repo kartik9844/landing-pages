@@ -476,6 +476,176 @@
         transform: translateY(0);
       }
 
+      .course-page {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 88% 8%, rgba(25, 194, 209, 0.24), transparent 24rem),
+          linear-gradient(145deg, #efffff 0%, #e6f6ff 54%, #f8edff 100%);
+      }
+
+      .course-page .course-wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+
+      .course-page .course-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+        gap: clamp(26px, 5vw, 70px);
+        align-items: center;
+      }
+
+      .course-page .course-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #082d68;
+        font-weight: 900;
+      }
+
+      .course-page .course-brand img {
+        width: 76px;
+        height: 54px;
+        object-fit: contain;
+      }
+
+      .course-page .course-brand small {
+        display: block;
+        color: #81208f;
+        font-size: 12px;
+      }
+
+      .course-page .course-kicker {
+        display: inline-flex;
+        margin-top: 25px;
+        padding: 8px 13px;
+        border-left: 4px solid #a71f88;
+        background: rgba(255, 255, 255, 0.82);
+        color: #81208f;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .course-page .course-hero h2 {
+        margin-top: 17px;
+        color: #082d68;
+        font-size: clamp(38px, 5.4vw, 72px);
+        line-height: 1.03;
+      }
+
+      .course-page .course-hero h2 span {
+        color: #a71f88;
+      }
+
+      .course-page .course-lead {
+        max-width: 650px;
+        margin-top: 20px;
+        color: #56728d;
+        font-size: clamp(17px, 2vw, 21px);
+      }
+
+      .course-page .course-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 27px;
+      }
+
+      .course-page .course-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 13px 18px;
+        border-radius: 5px;
+        color: #fff;
+        background: linear-gradient(135deg, #81208f, #a71f88);
+        box-shadow: 0 15px 28px rgba(129, 32, 143, 0.24);
+        font-size: 15px;
+        font-weight: 950;
+        text-decoration: none;
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .course-page .course-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 34px rgba(129, 32, 143, 0.3);
+      }
+
+      .course-page .course-button.whatsapp {
+        background: #118f61;
+        box-shadow: 0 15px 28px rgba(17, 143, 97, 0.2);
+      }
+
+      .course-page .course-poster {
+        padding: 9px;
+        border: 1px solid rgba(8, 45, 104, 0.14);
+        background: #fff;
+        box-shadow: 0 24px 70px rgba(8, 45, 104, 0.18);
+        transform: rotate(1deg);
+      }
+
+      .course-page .course-poster img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .course-page .course-facts,
+      .course-page .course-details {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      .course-page .course-fact,
+      .course-page .course-detail {
+        padding: 16px;
+        border-top: 4px solid #18c2d1;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 12px 27px rgba(8, 45, 104, 0.08);
+      }
+
+      .course-page .course-fact:nth-child(2),
+      .course-page .course-detail:nth-child(2) { border-color: #81208f; }
+      .course-page .course-fact:nth-child(3),
+      .course-page .course-detail:nth-child(3) { border-color: #a71f88; }
+      .course-page .course-fact:nth-child(4),
+      .course-page .course-detail:nth-child(4) { border-color: #0a65a9; }
+      .course-page .course-fact strong,
+      .course-page .course-detail strong { display: block; color: #082d68; font-size: 18px; }
+      .course-page .course-fact span,
+      .course-page .course-detail span { display: block; margin-top: 4px; color: #56728d; font-size: 14px; font-weight: 750; }
+
+      .course-page .course-block { margin-top: clamp(54px, 8vw, 96px); }
+      .course-page .course-heading { margin-bottom: 20px; }
+      .course-page .course-heading h3 { color: #082d68; font-size: clamp(28px, 4vw, 48px); line-height: 1.08; }
+      .course-page .course-heading p { max-width: 600px; margin-top: 8px; color: #56728d; font-size: 16px; font-weight: 700; }
+      .course-page .course-topics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+      .course-page .course-topic { display: flex; align-items: flex-start; gap: 12px; padding: 16px; border: 1px solid rgba(8, 45, 104, 0.1); background: rgba(255, 255, 255, 0.8); box-shadow: 0 10px 24px rgba(8, 45, 104, 0.06); }
+      .course-page .course-topic i { display: grid; flex: 0 0 31px; width: 31px; height: 31px; place-items: center; border-radius: 50%; color: #fff; background: #0a65a9; font-style: normal; font-weight: 900; }
+      .course-page .course-topic:nth-child(3n) i { background: #81208f; }
+      .course-page .course-topic:nth-child(3n + 1) i { background: #a71f88; }
+      .course-page .course-topic b { color: #082d68; font-size: 16px; }
+
+      .course-page .course-offer { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; align-items: center; padding: clamp(23px, 4vw, 42px); color: #fff; background: linear-gradient(120deg, #082d68, #087faf 63%, #18c2d1); box-shadow: 0 24px 70px rgba(8, 45, 104, 0.18); }
+      .course-page .course-offer h3 { color: #fff; font-size: clamp(28px, 4vw, 46px); line-height: 1.05; }
+      .course-page .course-offer p { margin-top: 10px; color: rgba(255, 255, 255, 0.86); font-size: 17px; }
+      .course-page .course-price { padding: 20px; border: 1px solid rgba(255, 255, 255, 0.26); background: rgba(255, 255, 255, 0.13); text-align: center; }
+      .course-page .course-price small { font-size: 16px; text-decoration: line-through; opacity: 0.75; }
+      .course-page .course-price strong { display: block; margin: 3px 0 9px; color: #fff; font-size: clamp(44px, 6vw, 68px); line-height: 1; }
+      .course-page .course-price span { color: #d4ffff; font-weight: 900; }
+
+      .course-page .course-cta { padding: clamp(25px, 4vw, 43px); color: #fff; background: linear-gradient(120deg, #81208f, #582173 55%, #082d68); box-shadow: 0 24px 70px rgba(8, 45, 104, 0.18); text-align: center; }
+      .course-page .course-cta h3 { color: #fff; font-size: clamp(28px, 4vw, 46px); line-height: 1.08; }
+      .course-page .course-cta p { margin-top: 9px; color: rgba(255, 255, 255, 0.86); font-size: 17px; }
+      .course-page .course-cta .course-actions { justify-content: center; }
+      .course-page .course-contact { display: inline-flex; margin-top: 17px; padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(255, 255, 255, 0.1); font-weight: 900; }
+
       @media (max-width: 1080px) {
         .hero-grid,
         .books {
@@ -525,6 +695,19 @@
         .book {
           min-height: 340px;
         }
+
+        .course-page .course-hero,
+        .course-page .course-offer,
+        .course-page .course-topics,
+        .course-page .course-facts,
+        .course-page .course-details {
+          grid-template-columns: 1fr;
+        }
+
+        .course-page .course-poster {
+          max-width: 620px;
+          margin: 0 auto;
+        }
       }
     </style>
   </head>
@@ -542,6 +725,7 @@
       <nav class="nav" aria-label="Language navigation">
         <a href="#kannada">ಕನ್ನಡ ಪುಟ</a>
         <a href="#english">English Page</a>
+        <a href="#course">ಹೊಸ ಕೋರ್ಸ್</a>
         <a href="tel:9606496416">Call Now</a>
       </nav>
     </header>
@@ -703,6 +887,61 @@
             <a href="tel:9606496416">9606496416</a>
             <a href="tel:9606988910">9606988910</a>
             <a href="tel:9606496409">9606496409</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page course-page" id="course">
+        <div class="course-wrap">
+          <div class="course-hero">
+            <div class="reveal">
+              <div class="course-brand"><img src="public/baa-logo.png" alt="Basava Acu Academy logo" /><span>Basava Acu Academy<small>Holistic Health • Better Life</small></span></div>
+              <div class="course-kicker">3 ದಿನಗಳ ವಿಶೇಷ ಆನ್‌ಲೈನ್ ಪ್ರಾಯೋಗಿಕ ಲೈವ್ ತರಗತಿ</div>
+              <h2>ಮರ್ಮ ಥೆರಪಿ, ನೋವು ನಿರ್ವಹಣೆ <span>ಮತ್ತು ಮೋಕ್ಸಿಬಷನ್</span></h2>
+              <p class="course-lead">ದೇಹದ ಪ್ರಮುಖ Pressure Points, Energy Balance ಮಾಡುವ ಸರಳ ವಿಧಾನಗಳು ಹಾಗೂ ದಿನನಿತ್ಯದ ಆರೋಗ್ಯ ಕಾಳಜಿಗೆ ಉಪಯುಕ್ತವಾದ ನೈಸರ್ಗಿಕ ವಿಧಾನಗಳ ಬಗ್ಗೆ ತಿಳಿದುಕೊಳ್ಳಿ.</p>
+              <div class="course-actions"><a class="course-button" href="https://rzp.io/l/MARMAANDBACKPAINCOURSE">ಸೀಟ್ ಕಾಯ್ದಿರಿಸಿ →</a><a class="course-button whatsapp" href="https://wa.me/919606496405?text=Hi">WhatsApp ನಲ್ಲಿ Hi ಕಳುಹಿಸಿ</a></div>
+            </div>
+            <div class="course-poster reveal"><img src="public/marma-course-poster.jpeg" alt="ಮರ್ಮ ಥೆರಪಿ, ಬೆನ್ನು ನೋವು, ಮಂಡಿ ನೋವು ಮತ್ತು ಕುತ್ತಿಗೆ ನೋವು ಮೂರು ದಿನಗಳ ತರಗತಿ ಪೋಸ್ಟರ್" /></div>
+          </div>
+
+          <div class="course-facts">
+            <div class="course-fact reveal"><strong>ಸೆಪ್ಟೆಂಬರ್ 23</strong><span>ತರಗತಿ ಆರಂಭ</span></div>
+            <div class="course-fact reveal"><strong>ಸಂಜೆ 7:30</strong><span>ಆನ್‌ಲೈನ್ ಲೈವ್</span></div>
+            <div class="course-fact reveal"><strong>45 ದಿನ</strong><span>ರೆಕಾರ್ಡಿಂಗ್ ಲಭ್ಯ</span></div>
+            <div class="course-fact reveal"><strong>500 ಸೀಟ್‌ಗಳು</strong><span>ಮಾತ್ರ ಲಭ್ಯ</span></div>
+          </div>
+
+          <div class="course-block">
+            <div class="course-heading reveal"><h3>ನೀವು ಕಲಿಯುವ ಪ್ರಮುಖ ವಿಷಯಗಳು</h3><p>ಇದು ಕೇವಲ ಒಂದು ತರಗತಿಯಲ್ಲ. ನಿಮ್ಮ ಹಾಗೂ ನಿಮ್ಮ ಕುಟುಂಬದ ಆರೋಗ್ಯದ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಲು ಸಿಗುವ ಒಂದು ವಿಶೇಷ ಅವಕಾಶ.</p></div>
+            <div class="course-topics">
+              <div class="course-topic reveal"><i>01</i><b>Marma Therapy ಮತ್ತು ದೇಹದ ಪ್ರಮುಖ Pressure Points ಪರಿಚಯ</b></div>
+              <div class="course-topic reveal"><i>02</i><b>Back Pain / ಬೆನ್ನು ನೋವಿಗೆ ಸಂಬಂಧಿಸಿದ Pressure Points</b></div>
+              <div class="course-topic reveal"><i>03</i><b>Neck Pain / ಕುತ್ತಿಗೆ ನೋವಿಗೆ ಸಂಬಂಧಿಸಿದ Pressure Points</b></div>
+              <div class="course-topic reveal"><i>04</i><b>Knee Pain / ಮಂಡಿ ನೋವಿಗೆ ಉಪಯುಕ್ತವಾದ ವಿಧಾನಗಳು</b></div>
+              <div class="course-topic reveal"><i>05</i><b>Sciatica Pain / ಸಯಾಟಿಕಾ ನೋವಿಗೆ ಸಂಬಂಧಿಸಿದ Pressure Points</b></div>
+              <div class="course-topic reveal"><i>06</i><b>Energy Balance ಮಾಡುವ ಸರಳ ವಿಧಾನಗಳು</b></div>
+              <div class="course-topic reveal"><i>07</i><b>ದಿನನಿತ್ಯದ ಆರೋಗ್ಯ ಕಾಳಜಿಗೆ ಉಪಯುಕ್ತವಾದ ನೈಸರ್ಗಿಕ ಟಿಪ್ಸ್</b></div>
+              <div class="course-topic reveal"><i>08</i><b>Moxibustion / ಮೋಕ್ಸಿಬಷನ್ ಮತ್ತು ಕುಟುಂಬದವರಿಗೂ ಉಪಯೋಗವಾಗುವ ಸರಳ ವಿಧಾನಗಳು</b></div>
+            </div>
+          </div>
+
+          <div class="course-block course-offer reveal">
+            <div><h3>ವಿಶೇಷ ತರಬೇತಿ ಶುಲ್ಕ</h3><p>ಅಸಲಿ ಬೆಲೆ ₹5,000/- • ಕೇವಲ 500 ಸೀಟ್‌ಗಳು ಮಾತ್ರ. “ನಂತರ ನೋಡೋಣ” ಎಂದು ಮುಂದೂಡಬೇಡಿ.</p></div>
+            <div class="course-price"><small>ಅಸಲಿ ಬೆಲೆ ₹5,000/-</small><strong>₹1,498/-</strong><span>ಇಂದೇ ನಿಮ್ಮ ಸೀಟ್ ಕಾಯ್ದಿರಿಸಿ</span></div>
+          </div>
+
+          <div class="course-block course-details">
+            <div class="course-detail reveal"><strong>ತರಬೇತುದಾರರು</strong><span>ಡಾ. ಬಸವರಾಜ್. ಕೆ</span></div>
+            <div class="course-detail reveal"><strong>ದಿನಾಂಕ ಮತ್ತು ಸಮಯ</strong><span>ಸೆಪ್ಟೆಂಬರ್ 23ರಿಂದ<br />ಸಂಜೆ 7:30ಕ್ಕೆ</span></div>
+            <div class="course-detail reveal"><strong>ಭಾಷೆ</strong><span>ಕನ್ನಡ</span></div>
+            <div class="course-detail reveal"><strong>ರೆಕಾರ್ಡಿಂಗ್</strong><span>45 ದಿನಗಳವರೆಗೆ ಲಭ್ಯ</span></div>
+          </div>
+
+          <div class="course-block course-cta reveal">
+            <h3>ನಿಮ್ಮ ಸೀಟ್ ಅನ್ನು ಇಂದೇ ಕಾಯ್ದಿರಿಸಿ</h3>
+            <p>ಸೇರಲು WhatsApp ನಲ್ಲಿ “Hi” ಎಂದು ಕಳುಹಿಸಿ. Call ಬೇಡ — WhatsApp ಮಾತ್ರ.</p>
+            <div class="course-actions"><a class="course-button" href="https://rzp.io/l/MARMAANDBACKPAINCOURSE">ಪಾವತಿ ಮಾಡಿ ಸೀಟ್ ಕಾಯ್ದಿರಿಸಿ</a><a class="course-button whatsapp" href="https://wa.me/919606496405?text=Hi">WhatsApp: 9606496405</a></div>
+            <div class="course-contact">Basava Acu Academy, Bengaluru • “ಮನೆ ಮನೆಯಲ್ಲೂ ವೈದ್ಯರನ್ನು ಕಾಣಬೇಕು.”</div>
           </div>
         </div>
       </section>
